@@ -40,7 +40,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="악보가 로딩중입니다."
+        android:text="8분의1음표4옥타브 도입니다"
         android:gravity="center"
         style="@style/midTextSize"
         android:layout_gravity ="center_horizontal"
