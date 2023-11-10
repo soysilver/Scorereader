@@ -35,7 +35,14 @@ public class findScores extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        step3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //score1 페이지 이동
+                Intent intent = new Intent(getApplicationContext(), Score3.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
