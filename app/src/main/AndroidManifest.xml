@@ -29,6 +29,8 @@
         <activity android:name=".findScores"/>
         <activity android:name=".PlaySound"/>
         <activity android:name=".Score1"/>
+        <activity android:name=".Score2"/>
+        <activity android:name=".Score3"/>
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@ public class Score1 extends AppCompatActivity  {
 
     int i = 0;
     int position = 0;
-    int len = 0;
+    int sFlag = 0;
 
     String scorelist[]= new String[] {
             "4분의1음표4옥타브 도입니다.", "4분의1음표4옥타브 도입니다", "4분의1음표4옥타브 솔입니다", "4분의1음표4옥타브 솔입니다","4분의1음표4옥타브 라입니다", "4분의1음표4옥타브 라입니다", "2분의1음표4옥타브 솔입니다", "4분의1음표4옥타브 파입니다","4분의1음표4옥타브 파입니다", "4분의1음표4옥타브 미입니다", "4분의1음표4옥타브 미입니다", "4분의1음표4옥타브 레입니다","4분의1음표4옥타브 레입니다", "2분의1음표4옥타브 도입니다", "4분의1음표4옥타브 솔입니다", "4분의1음표4옥타브 솔입니다","4분의1음표4옥타브 파입니다", "4분의1음표4옥타브 파입니다", "4분의1음표4옥타브 미입니다", "4분의1음표4옥타브 미입니다","2분의1음표4옥타브 레입니다", "4분의1음표4옥타브 솔입니다",
@@ -163,9 +163,22 @@ public class Score1 extends AppCompatActivity  {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.seekTo((int) posList[i]*1000);
-                mediaPlayer.start();
-                score.setText(" ");
+                if(sFlag ==0){
+                    mediaPlayer.seekTo((int) posList[i]*1000);
+                    mediaPlayer.start();
+                    score.setText(" ");
+                    sFlag = 1;
+                    start.setText("멈춤");
+                }
+                else{
+                    position=mediaPlayer.getCurrentPosition();
+                    sortTime(position);
+                    mediaPlayer.pause();
+                    score.setText(scorelist[i]);
+                    sFlag = 0;
+                    start.setText("재생");
+                }
+
             }
         });
 
@@ -176,6 +189,7 @@ public class Score1 extends AppCompatActivity  {
                 sortTime(position);
                 mediaPlayer.pause();
                 score.setText(scorelist[i]);
+                sFlag = 0;
             }
         });
 

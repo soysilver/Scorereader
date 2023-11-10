@@ -12,7 +12,7 @@ public class Score3 extends AppCompatActivity  {
 
     int i = 0;
     int position = 0;
-    int len = 0;
+    int sFlag = 0;
 
     String scorelist[]= new String[] {
 
@@ -35,7 +35,7 @@ public class Score3 extends AppCompatActivity  {
             0, 0.75, 1.0, 1.5, 3.0, 3.5, 3.75, 4.0, 4.5, 5.0, 5.5, 6.0, 6.25, 6.5,
             7.0, 7.5, 7.75, 8.0, 8.5, 9.0, 9.25, 9.5, 9.75, 10.0, 10.25, 10.5, 11.0,
             11.5, 12.0, 12.75, 13.0, 13.5, 15.0, 15.5, 15.75, 16.0, 16.5, 17.0, 17.5,
-            18.0, 18.5, 19.0, 19.5, 20.0, 20.25, 20.5, 21.0, 22.0, 22.25, 22.5, 24.0
+            18.0, 18.5, 19.0, 19.5, 20.0, 20.25, 20.5, 21.0, 22.0, 22.25, 22.5
     };
 
 
@@ -53,7 +53,7 @@ public class Score3 extends AppCompatActivity  {
         Button stop = (Button)findViewById(R.id.button4);
         TextView score = (TextView)findViewById(R.id.textView);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.mscz1);
+        mediaPlayer = MediaPlayer.create(this, R.raw.mscz2);
 
         PlaySound playSound = new PlaySound();
 
@@ -191,9 +191,22 @@ public class Score3 extends AppCompatActivity  {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.seekTo((int) posList[i]*1000);
-                mediaPlayer.start();
-                score.setText(" ");
+                if(sFlag ==0){
+                    mediaPlayer.seekTo((int) posList[i]*1000);
+                    mediaPlayer.start();
+                    score.setText(" ");
+                    sFlag = 1;
+                    start.setText("멈춤");
+                }
+                else{
+                    position=mediaPlayer.getCurrentPosition();
+                    sortTime(position);
+                    mediaPlayer.pause();
+                    score.setText(scorelist[i]);
+                    sFlag = 0;
+                    start.setText("재생");
+                }
+
             }
         });
 
@@ -204,6 +217,7 @@ public class Score3 extends AppCompatActivity  {
                 sortTime(position);
                 mediaPlayer.pause();
                 score.setText(scorelist[i]);
+                sFlag = 0;
             }
         });
 
