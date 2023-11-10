@@ -80,6 +80,9 @@ public class Score2 extends AppCompatActivity  {
             else if(scorelist[j].contains("3옥타브 시")){
                 freqList[j]=494/2;
             }
+            else if(scorelist[j].contains("4옥타브 도샾")){
+                freqList[j]=278;
+            }
             else if(scorelist[j].contains("4옥타브 도")){
                 freqList[j]=262;
             }
@@ -88,6 +91,9 @@ public class Score2 extends AppCompatActivity  {
             }
             else if(scorelist[j].contains("4옥타브 미")){
                 freqList[j]=330;
+            }
+            else if(scorelist[j].contains("4옥타브 파샾")){
+                freqList[j]=370;
             }
             else if(scorelist[j].contains("4옥타브 파")){
                 freqList[j]=349;
@@ -101,8 +107,11 @@ public class Score2 extends AppCompatActivity  {
             else if(scorelist[j].contains("4옥타브 시")){
                 freqList[j]=494;
             }
+            else if(scorelist[j].contains("5옥타브 도샆")){
+                freqList[j]=554;
+            }
             else if(scorelist[j].contains("5옥타브 도")){
-                freqList[j]=262*2;
+                freqList[j]=523;
             }
             else if(scorelist[j].contains("5옥타브 레")){
                 freqList[j]=294*2;
