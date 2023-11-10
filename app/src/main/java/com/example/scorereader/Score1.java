@@ -185,11 +185,16 @@ public class Score1 extends AppCompatActivity  {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                position=mediaPlayer.getCurrentPosition();
-                sortTime(position);
                 mediaPlayer.pause();
-                score.setText(scorelist[i]);
                 sFlag = 0;
+
+                start.setText("멈춤");
+                position=0;
+                sortTime(position);
+                mediaPlayer.seekTo((int) posList[i]*1000);
+                mediaPlayer.start();
+                score.setText(scorelist[i]);
+
             }
         });
 
