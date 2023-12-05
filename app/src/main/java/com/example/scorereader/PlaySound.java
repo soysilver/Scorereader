@@ -1,5 +1,6 @@
 package com.example.scorereader;
 
+
 import android.app.Activity;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -56,6 +57,7 @@ public class PlaySound extends Activity {
         thread.start();
         System.out.println("1번한수");
     }
+
 
     void genTone(){
         // fill out the array

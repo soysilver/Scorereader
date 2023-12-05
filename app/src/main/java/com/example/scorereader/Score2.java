@@ -16,22 +16,15 @@ public class Score2 extends AppCompatActivity  {
 
     String scorelist[]= new String[] {
 
-            "4분의 1음표 5옥타브 레입니다.", "8분의 3음표 4옥타브 라입니다.", "8분의 1음표 4옥타브 시입니다.", "2분의 1음표 4옥타브 라입니다.", "4분의 1음표 4옥타브 미입니다.", "4분의 1음표 4옥타브 레입니다.",
-            "8분의 3음표 4옥타브 파샾입니다.", "8분의 1음표 4옥타브 솔입니다.", "2분의 1음표 4옥타브 파샾입니다.", "4분의 1음표 4옥타브 도샾입니다.", "4분의 1음표 3옥타브 시입니다.", "8분의 3음표 4옥타브 레입니다.",
-            "8분의 1음표 4옥타브 미입니다.", "2분의 1음표 4옥타브 레입니다.", "4분의 1음표 4옥타브 파샾입니다.", "4분의 1음표 4옥타브 솔입니다.", "8분의 1음표 4옥타브 솔입니다.", "8분의 1음표 4옥타브 파샾입니다.",
-            "8분의 1음표 4옥타브 미입니다.", "8분의 1음표 4옥타브 레입니다.", "2분의 1음표 4옥타브 미입니다.", "8분의 1음표 4옥타브 레입니다.", "8분의 1음표 4옥타브 미입니다.", "4분의 1음표 4옥타브 파샾입니다.",
-            "8분의 3음표 4옥타브 라입니다.", "8분의 1음표 4옥타브 시입니다.", "2분의 1음표 4옥타브 라입니다.", "4분의 1음표 4옥타브 미입니다.", "4분의 1음표 4옥타브 레입니다.", "8분의 3음표 4옥타브 파샾입니다.",
-            "8분의 1음표 4옥타브 솔입니다.", "2분의 1음표 4옥타브 파샾입니다.", "4분의 1음표 5옥타브 도샾입니다.", "4분의 1음표 4옥타브 시입니다.", "8분의 1음표 4옥타브 시입니다.", "8분의 1음표 5옥타브 도샾입니다.",
-            "4분의 1음표 5옥타브 레입니다.", "8분의 3음표 4옥타브 라입니다.", "8분의 1음표 4옥타브 레입니다.", "4분의 1음표 4옥타브 파샾입니다.", "4분의 1음표 4옥타브 솔입니다.", "8분의 1음표 4옥타브 솔입니다.",
-            "8분의 1음표 4옥타브 파샾입니다.", "8분의 1음표 4옥타브 미입니다.", "8분의 1음표 4옥타브 도샾입니다.", "2분의 1음표 4옥타브 레입니다."
-
+            "4분의 1음표 4옥타브 파샾입니다.", "8분의 3음표 4옥타브 라입니다.", "8분의 1음표 4옥타브 시입니다.", "2분의 1음표 4옥타브 라입니다.", "4분의 1음표 4옥타브 미입니다.", "4분의 1음표 4옥타브 레입니다.", "8분의 3음표 4옥타브 파샾입니다.",
+            "8분의 1음표 4옥타브 솔입니다.", "2분의 1음표 4옥타브 파샾입니다.", "4분의 1음표 5옥타브 도샾입니다.", "4분의 1음표 4옥타브 시입니다.", "8분의 1음표 4옥타브 시입니다.", "8분의 1음표 5옥타브 도샾입니다.", "4분의 1음표 5옥타브 레입니다.",
+            "8분의 3음표 4옥타브 라입니다.", "8분의 1음표 4옥타브 레입니다.", "4분의 1음표 4옥타브 파샾입니다.", "4분의 1음표 4옥타브 솔입니다.", "8분의 1음표 4옥타브 솔입니다.", "8분의 1음표 4옥타브 파샾입니다.", "8분의 1음표 4옥타브 미입니다.",
+            "8분의 1음표 4옥타브 도샾입니다.", "2분의 1음표 4옥타브 레입니다."
 
     };
 
     double posList[]=new double[]{
-            0 ,  0.5 ,  1.25 ,  1.5 ,  2.5 ,  3.0 ,  3.5 ,  4.25 ,  4.5 ,  5.5 ,  6.0 ,  6.5 ,  7.25 ,  7.5 ,  8.5 ,  9.0 ,  9.5 ,  9.75 ,  10.0 ,  10.25 ,  10.5 ,  11.5 ,  11.75 ,
-            12.0 ,  12.5 ,  13.25 ,  13.5 ,  14.5 ,  15.0 ,  15.5 ,  16.25 ,  16.5 ,  17.5 ,  18.0 ,  18.5 ,  18.75 ,  19.0 ,  19.5 ,  20.25 ,  20.5 ,  21.0 ,  21.5 ,  21.75 ,  22.0 ,
-            22.25 ,  22.5 };
+            0, 0.5, 1.25, 1.5, 2.5, 3.0, 3.5, 4.25, 4.5, 5.5, 6.0, 6.5, 6.75, 7.0, 7.5, 8.25, 8.5, 9.0, 9.5, 9.75, 10.0, 10.25, 10.5};
 
 
 
@@ -108,7 +101,7 @@ public class Score2 extends AppCompatActivity  {
                 freqList[j]=494;
             }
             else if(scorelist[j].contains("5옥타브 도샆")){
-                freqList[j]=554;
+                freqList[j]=558;
             }
             else if(scorelist[j].contains("5옥타브 도")){
                 freqList[j]=523;
@@ -142,7 +135,9 @@ public class Score2 extends AppCompatActivity  {
         before.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                mediaPlayer.pause();
+                sFlag = 0;
+                start.setText("재생");
                 if(i > 0){
                     i--;
                     score.setText(scorelist[i]);
@@ -165,12 +160,9 @@ public class Score2 extends AppCompatActivity  {
         after.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if(scorelist.length-1 > i & i >= 0){
-                    i++;
-                    score.setText(scorelist[i]);
-                    playSound.setFreqOfTone(freqList[i]);
-                }
+                mediaPlayer.pause();
+                sFlag = 0;
+                start.setText("재생");
                 if(i >= scorelist.length-1){
                     i = 0;
                     score.setText(scorelist[i]);
@@ -178,6 +170,11 @@ public class Score2 extends AppCompatActivity  {
 
                 }else if(i<0){
                     i = scorelist.length-1;
+                    score.setText(scorelist[i]);
+                    playSound.setFreqOfTone(freqList[i]);
+                }
+                else if(scorelist.length-1 > i & i >= 0){
+                    i++;
                     score.setText(scorelist[i]);
                     playSound.setFreqOfTone(freqList[i]);
                 }
@@ -219,7 +216,7 @@ public class Score2 extends AppCompatActivity  {
                 mediaPlayer.seekTo((int) posList[i]*1000);
                 mediaPlayer.start();
                 score.setText(scorelist[i]);
-
+                score.setText(" ");
             }
         });
 

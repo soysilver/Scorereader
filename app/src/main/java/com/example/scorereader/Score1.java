@@ -116,6 +116,9 @@ public class Score1 extends AppCompatActivity  {
         before.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.pause();
+                sFlag = 0;
+                start.setText("재생");
 
                 if(i > 0){
                     i--;
@@ -139,6 +142,9 @@ public class Score1 extends AppCompatActivity  {
         after.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.pause();
+                sFlag = 0;
+                start.setText("재생");
 
                 if(scorelist.length-1 > i & i >= 0){
                     i++;
@@ -194,6 +200,7 @@ public class Score1 extends AppCompatActivity  {
                 mediaPlayer.seekTo((int) posList[i]*1000);
                 mediaPlayer.start();
                 score.setText(scorelist[i]);
+                score.setText(" ");
 
             }
         });
